@@ -1,0 +1,68 @@
+
+html,body{
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden; 
+    margin: 0;
+}
+
+.sky, .grass, .road{
+    position: relative;
+}
+/*they will fall inline with each other*/
+
+.sky{
+    height: 40%; 
+    background: skyblue; 
+}
+
+.grass{
+    height: 30%; 
+    background: seagreen; 
+}
+
+.road{
+    height: 30%; 
+    background: dimgrey; 
+    box-sizing: border-box; 
+    border-top: 10px solid gray; 
+    border-bottom: 10px solid gray; 
+    width: 100%;
+}
+
+.lines{
+    box-sizing: border-box; 
+    border: 5px dashed #fff; 
+    height: 0;
+    width: 100%; 
+    position: absolute; 
+    top: 45%; 
+}
+/*do not want to move*/
+/*places it in mid of road*/
+.mario{
+    position: absolute; 
+    top: -48px; 
+    left: 0; 
+    animation-name: drive;
+    animation-duration: 2s;
+}
+
+.luigi{
+    position: absolute; 
+    top: 88px; 
+    left: 0; 
+    animation-name: drive; 
+    animation-duration: 3s; 
+}
+
+/*KEYFRAMES*/
+/*name of keyframe is drive*/
+@keyframes drive{
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(900px)
+    }
+}
