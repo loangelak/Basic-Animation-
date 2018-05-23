@@ -1,0 +1,17 @@
+/*PRESET*/
+*{padding: 0; margin: 0; }
+
+/*LAYOUT*/
+html{
+    text-align: center; 
+    margin-top: 30px; 
+}
+
+body{
+    margin: auto; 
+}
+
+.portfolio{
+    text-align: center;
+    margin: auto; 
+}
