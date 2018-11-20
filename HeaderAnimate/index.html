@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Header Animation</title>
+  </head>
+
+  <style>
+  .main {
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+  }
+
+  .main-header-primary {
+    display: block; 
+    font-size: 5.0rem; 
+    font-weight: 400; 
+    letter-spacing: 35px; 
+    animation: moveInLeft 1s ease-out; 
+  }
+
+  .main-header-secondary {
+    font-family: sans-serif; 
+    display: block; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    text-align: center; 
+    letter-spacing: 31px;
+    color: hotpink; 
+    animation: moveInRight 1s ease-out;
+  }
+
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0; 
+      transform: translateX(-100%);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1; 
+      transform: translate(0);
+    }
+  }
+
+  @keyframes moveInRight {
+    0% {
+      opacity: 0; 
+      transform: translateX(100px);
+    }
+    80% {
+      transform: translateX(-10%);
+    }
+    100% {
+      opacity: 1; 
+      transform: translate(0);
+    }
+  }
+  </style>
+
+  <body>
+    <div class="main">
+      <h1 class="main-header">
+        <span class="main-header-primary">Happy</span>
+        <span class="main-header-secondary">Birthday</span>
+      </h1>
+    </div>
+  </body>
+
+</html>
